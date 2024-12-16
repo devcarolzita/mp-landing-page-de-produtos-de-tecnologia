@@ -43,6 +43,13 @@ li {
   margin-bottom: 20px;
 }
 
+.header__nav__desktop {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
 .header__text {
   width: 48%;
 }
