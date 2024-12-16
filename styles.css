@@ -24,19 +24,16 @@ li {
 }
 
 .button {
-  background: var(--button-gradient);
-  border-radius: 10px;
-  padding: 10px 20px;
-  color: var(--primary-color);
-  text-decoration: none;
-  font-weight: 200;
-  font-size: 0.9rem;
+  background: white;
   border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 0.9rem;
 }
 
-.button-white {
-  color: black;
-  background: var(--primary-color);
+.button-gradient {
+  background: var(--button-gradient);
+  color: white;
 }
 
 .header__nav {
@@ -78,6 +75,9 @@ li {
   margin-top: -235px;
 }
 
+.header__image-bg-left {
+  display: none;
+}
 .navigation__header {
   display: flex;
   justify-content: space-between;
@@ -276,6 +276,18 @@ li {
     display: flex;
     width: 36%;
     justify-content: space-between;
+    align-items: center;
+  }
+  .header__nav-item:nth-child(2) {
+    width: 15%;
+  }
+  .header__image-bg-left {
+    display: block;
+    width: 20%;
+    position: absolute;
+    left: 0;
+    left: calc(-8vw);
+    top: calc(35vw + 20%);
   }
 
   .header__desktop__menu {
