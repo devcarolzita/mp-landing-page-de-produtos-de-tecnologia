@@ -19,14 +19,27 @@
     <header class="header">
       <nav class="header__nav">
         <div class="header__nav__desktop">
-          <img src="./assets/menu.png" alt="Menu hamburguer" class="header__nav-item">
-          <img src="./assets/logo.svg" alt="Logo wecht" class="header__nav-item">
+          <img src="./assets/menu.png" alt="Menu hamburguer" class="header__nav-item header__nav-item-mobile" >
+          <div class="header__nav-item__menu" >
+            <a href="#products" class="">Produtos</a>
+            <a href="">Suporte</a>
+            <a href="">Encomendar</a>
+            <a href="">Contato</a>
+          </div>
+
+          <a href="#"> <img src="./assets/logo.svg" alt="Logo wecht" class="header__nav-item"></a>
+         
           <div class="header__desktop-item">
-            <div class="header__desktop__menu">
-              <span>Produtos</span>
-              <i class="fas fa-angle-down"></i>
+            <div class="header__desktop__menu" id="header__desktop__menu">
+              <div class="menu">
+                <button class="menu-toggle">Produtos &#9662;</button>
+                <div class="submenu">
+                  <a href="#products">Celular</a>
+                  <a href="#">Tablet</a>
+                </div>
+              </div>
             </div>
-            <p>Contato</p>
+            <a href=""><p>Contato</p></a>
           </div>
         </div>
         <div class="header__desktop-item">
@@ -53,15 +66,22 @@
     <main>
       <div class="navigation__header">
         <div class="navigation__filters">
-          <span>Filtros</span>
-          <i class="fas fa-angle-down"></i>
+          <div class="filters">
+            <select id="sortOrder" class="navigation__filters">
+              <option value="default">Filtros           <i class="fas fa-angle-down"></i>
+              </option>
+              <option value="lowToHigh">Menor preço</option>
+              <option value="highToLow">Maior preço</option>
+              <option value="rating">Relevância</option>
+            </select>
+          </div>
         </div>
         <div class="navigation__search">
+          <input type="text" id="productName" placeholder="Procurar por nome" class="navigation__search-input">
           <i class="fas fa-search" class="navigation__search-icon"></i>
-          <button class="button button-white">Procurar</button>
         </div>
       </div>
-      <section class="products">
+      <!-- <section class="products">
         <div class="product">
           <h2>Iphone 16</h2>
           <img src="./assets/iphone16.png" alt="Foto do iphone 16">
@@ -134,8 +154,8 @@
           <button href="" class="button button-gradient">Compre agora</button>
   
         </div>
-      </section>
-      <div class="navigation__header">
+      </section> -->
+      <!-- <div class="navigation__header">
         <div class="navigation__filters">
           <span>Filtros</span>
           <i class="fas fa-angle-down"></i>
@@ -144,8 +164,21 @@
           <i class="fas fa-search" class="navigation__search-icon"></i>
           <button class="button button-white">Procurar</button>
         </div>
-      </div>
-      <div class="products">
+      </div> -->
+      <!-- <div class="filters">
+        <select id="sortOrder" class="navigation__filters">
+          <option value="default">Filtros           <i class="fas fa-angle-down"></i>
+          </option>
+          <option value="lowToHigh">Menor preço</option>
+          <option value="highToLow">Maior preço</option>
+          <option value="rating">Relevância</option>
+
+        </select>
+        <button class="button" id="applyFilters">Filtrar</button>
+      </div> -->
+      <div class="products" id="products"></div>
+
+      <!-- <div class="products">
         <div class="product">
           <h2>SeriA 3x</h2>
           <img src="./assets/smartwatch.png" alt="Foto do Smartwatch">
@@ -218,7 +251,7 @@
           <button href="" class="button button-gradient">Compre agora</button>
   
         </div>
-      </div>
+      </div> -->
       <section class="support">
         <img src="./assets/suporte.png" alt="Suporte ao client" class="support__image">
         <div class="support__content">
@@ -288,6 +321,7 @@
       </div>
     </footer>
   </div>
+  <script src="./script.js" type="module"> </script>
 </body>
 
 </html>
