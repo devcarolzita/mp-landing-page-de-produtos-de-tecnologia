@@ -32,6 +32,7 @@ li {
 
 a {
   text-decoration: none;
+  color: white;
 }
 
 .db-none {
@@ -53,6 +54,8 @@ a {
   padding: 10px 20px;
   border-radius: 10px;
   font-size: 0.9rem;
+  color: #000000;
+  cursor: pointer;
 }
 
 .button-gradient {
@@ -147,23 +150,27 @@ a {
 
 .navigation__search {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+  padding: 7px;
+  border: 1px solid var(--secondary-color);
 }
 
+.navigation__search i {
+  color: var(--secondary-color);
+}
 .navigation__filters {
     border: none;
     background: none;
-    color: white;
-    font-size: 1.1rem;
+    color: var(--secondary-color);
+    font-size: 0.9rem;
 }
 .navigation__search-input {
   border: none;
   background: none;
-  border: 1 px solid;
-  border-bottom: 1px solid #7d7d7d;
   padding: 2px;
-  color: white;
+  color: var(--secondary-color);
+  width: 50%;
 }
 .product {
   display: flex;
@@ -189,6 +196,11 @@ a {
   color: var(--secondary-color);
   text-decoration: line-through;
   font-size: 0.7rem;
+}
+
+.product__image {
+  width: 40%; 
+  height: 100%; 
 }
 
 .support {
@@ -315,16 +327,30 @@ a {
   display: none;
 }
 
-.product img {
-  width: 50%;
+
+.slide-desktop {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
 }
 
+.container__not-found {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.container__not-found-img {
+  width: 20%;
+}
 @media screen and (min-width: 900px) {
   button {
     font-size: 1.4rem;
   }
   .navigation__search {
-    width: 15%;
+    width: 10%;
   }
 
   .header__desktop-item {
@@ -450,7 +476,12 @@ a {
     width: 33%;
     justify-content: space-between;
   }
+ 
+  .slide-desktop  {
+    width: 50%;
+  }
 }
+
 
 .menu {
   position: relative;
@@ -498,4 +529,35 @@ a {
   display: block;
   opacity: 1;
   transform: translateY(0);
+}
+
+.slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25%;
+  height: 8px;
+  border-radius: 5px;
+  background: linear-gradient(90deg, rgba(19, 113, 239, 1) 0%, rgba(229, 57, 162, 1) 100%);
+  outline: none;
+  opacity: 0.9;
+  transition: opacity 0.3s;
+  cursor: pointer;
+}
+
+.slidecontainer label,span {
+  font-size: 0.9rem;
+  color: var(--secondary-color);
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: rgb(228, 227, 227);
+  border: 2px solid  rgb(228, 227, 227);;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: transform 0.2s ease;
 }

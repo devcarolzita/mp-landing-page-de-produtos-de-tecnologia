@@ -11,47 +11,40 @@ export const products = [
     backImg: "./assets/backIphone.png"
   },
   {
-    name: "iPhone 17",
+    name: "Samsung Z",
     price: 2899,
     originalPrice: 2199.90,
     paymentMethod: "PIX",
     rating: 3,
     reviews: 3,
     description: "O novíssimo sistema de câmera é muito versátil de perto ou de longe. Câmera de 48 MP",
-    srcImg: "./assets/iphone16.png",
-    backImg: "./assets/backIphone.png"
+    srcImg: "./assets/celulares/samsungfrente.png",
+    backImg: "./assets/celulares/samsungback.png"
   },
   {
-    name: "iPhone 18",
+    name: "Xiaomi Mi 9",
     price: 3899,
     originalPrice: 2199.90,
     paymentMethod: "PIX",
     rating: 2,
     reviews: 6,
     description: "O novíssimo sistema de câmera é muito versátil de perto ou de longe. Câmera de 48 MP",
-    srcImg: "./assets/iphone16.png",
-    backImg: "./assets/backIphone.png"
+    srcImg: "./assets/celulares/xiaomifrente.png",
+    backImg: "./assets/celulares/xiaomiback.png"
 
   },
   {
-    name: "Samsung ",
+    name: "Poco x3 ",
     price: 3899,
     originalPrice: 2199.90,
     paymentMethod: "PIX",
     rating: 5,
     reviews: 6,
     description: "O novíssimo sistema de câmera é muito versátil de perto ou de longe. Câmera de 48 MP",
-    srcImg: "./assets/iphone16.png"
+    srcImg: "./assets/celulares/pocofrente.png",
+    backImg: "./assets/celulares/pocoback.png"
+
   },
-  {
-    name: "Xiaomi ",
-    price: 3899,
-    originalPrice: 2199.90,
-    paymentMethod: "PIX",
-    rating: 5,
-    reviews: 6,
-    description: "O novíssimo sistema de câmera é muito versátil de perto ou de longe. Câmera de 48 MP",
-    srcImg: "./assets/iphone16.png"
-  },
+ 
 ]
 

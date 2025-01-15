@@ -9,8 +9,9 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Cherry+Swash:wght@400;700&family=Darker+Grotesque:wght@300..900&family=Nabla&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
     rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
   <link rel="stylesheet" href="styles.css">
+  <script src="./script.js" type="module" defer> </script>
   <title>MP - Projeto de produtos de tecnologia</title>
 </head>
 
@@ -19,8 +20,8 @@
     <header class="header">
       <nav class="header__nav">
         <div class="header__nav__desktop">
-          <img src="./assets/menu.png" alt="Menu hamburguer" class="header__nav-item header__nav-item-mobile" >
-          <div class="header__nav-item__menu" >
+          <img src="./assets/menu.png" alt="Menu hamburguer" class="header__nav-item header__nav-item-mobile">
+          <div class="header__nav-item__menu">
             <a href="#products" class="">Produtos</a>
             <a href="">Suporte</a>
             <a href="">Encomendar</a>
@@ -28,7 +29,7 @@
           </div>
 
           <a href="#"> <img src="./assets/logo.svg" alt="Logo wecht" class="header__nav-item"></a>
-         
+
           <div class="header__desktop-item">
             <div class="header__desktop__menu" id="header__desktop__menu">
               <div class="menu">
@@ -39,14 +40,16 @@
                 </div>
               </div>
             </div>
-            <a href=""><p>Contato</p></a>
+            <a href="">
+              <p>Contato</p>
+            </a>
           </div>
         </div>
         <div class="header__desktop-item">
           <div class="header__desktop__menu">
             <i class="fas fa-shopping-cart"></i>
             <i class="fas fa-search" class="navigation__search-icon"></i>
-            <button  class="button">Comprar</button>
+            <a href="#products" class="button"> Comprar</a>
           </div>
         </div>
       </nav>
@@ -56,7 +59,7 @@
           <h1 class="header__title">Design com
             Beleza e
             Funcionalidade</h1>
-            <button href="" class="button button-gradient">Compre agora</button>
+          <button href="" class="button button-gradient">Compre agora</button>
         </div>
         <img src="./assets/phone.png" alt="Imagem de um celular iphone 16" class="header__image">
       </div>
@@ -68,201 +71,46 @@
         <div class="navigation__filters">
           <div class="filters">
             <select id="sortOrder" class="navigation__filters">
-              <option value="default">Filtros           <i class="fas fa-angle-down"></i>
+              <option value="default">Ordenação <i class="fas fa-angle-down"></i>
               </option>
               <option value="lowToHigh">Menor preço</option>
               <option value="highToLow">Maior preço</option>
-              <option value="rating">Relevância</option>
+              <option value="rating">Avaliação</option>
             </select>
           </div>
         </div>
+        <div class="slidecontainer slide-desktop">
+          <label for="maxRange">Preço máximo:</label>
+          <div>
+            <input type="range" min="1" max="10000" value="10000" class="slider" id="maxRange">
+            <span id="maxValue">R$ 10.000</span>
+          </div>
+        </div>
         <div class="navigation__search">
-          <input type="text" id="productName" placeholder="Procurar por nome" class="navigation__search-input">
+          <input type="text" id="productName" placeholder="" class="navigation__search-input">
           <i class="fas fa-search" class="navigation__search-icon"></i>
         </div>
       </div>
-      <!-- <section class="products">
-        <div class="product">
-          <h2>Iphone 16</h2>
-          <img src="./assets/iphone16.png" alt="Foto do iphone 16">
-          <div class="product__rating">
-            <i class="fas fa-star product__rating-star"></i>
-            <i class="fas fa-star product__rating-star"></i>
-            <i class="fas fa-star product__rating-star"></i>
-            <i class="fas fa-star product__rating-star"></i>
-            <i class="fas fa-star product__rating-star"></i>
-            <span>(6)</span>
-          </div>
-          <p class="product__price">R$ 1899 no PIX
-            <span class="product__price-old">2199,90</span>
-          </p>
-          <p class="product__description">O novíssimo sistema de câmera é muito versátil de perto ou de longe. Câmera  de 48 MP</p>
-          <button href="" class="button button-gradient">Compre agora</button>
-  
+      <template id="not-found-template">
+        <div class="container__not-found">
+          <p> Não encontramos esse produto </p>
+          <img src="./assets/noFound.png" class="container__not-found-img" />
         </div>
-        <div class="product">
-          <h2>Iphone 16</h2>
-          <img src="./assets/iphone16.png" alt="Foto do iphone 16">
-          <div class="product__rating">
-            <i class="fas fa-star product__rating-star"></i>
-            <i class="fas fa-star product__rating-star"></i>
-            <i class="fas fa-star product__rating-star"></i>
-            <i class="fas fa-star product__rating-star"></i>
-            <i class="fas fa-star product__rating-star"></i>
-            <span>(6)</span>
-          </div>
-          <p class="product__price">R$ 1899 no PIX
-            <span class="product__price-old">2199,90</span>
-          </p>
-          <p class="product__description">O novíssimo sistema de câmera é muito versátil de perto ou de longe. Câmera  de 48 MP</p>
-          <button href="" class="button button-gradient">Compre agora</button>
-  
-        </div>
-        <div class="product">
-          <h2>Iphone 16</h2>
-          <img src="./assets/iphone16.png" alt="Foto do iphone 16">
-          <div class="product__rating">
-            <i class="fas fa-star product__rating-star"></i>
-            <i class="fas fa-star product__rating-star"></i>
-            <i class="fas fa-star product__rating-star"></i>
-            <i class="fas fa-star product__rating-star"></i>
-            <i class="fas fa-star product__rating-star"></i>
-            <span>(6)</span>
-          </div>
-          <p class="product__price">R$ 1899 no PIX
-            <span class="product__price-old">2199,90</span>
-          </p>
-          <p class="product__description">O novíssimo sistema de câmera é muito versátil de perto ou de longe. Câmera  de 48 MP</p>
-          <button href="" class="button button-gradient">Compre agora</button>
-  
-        </div>
-        <div class="product">
-          <h2>Iphone 16</h2>
-          <img src="./assets/iphone16.png" alt="Foto do iphone 16">
-          <div class="product__rating">
-            <i class="fas fa-star product__rating-star"></i>
-            <i class="fas fa-star product__rating-star"></i>
-            <i class="fas fa-star product__rating-star"></i>
-            <i class="fas fa-star product__rating-star"></i>
-            <i class="fas fa-star product__rating-star"></i>
-            <span>(6)</span>
-          </div>
-          <p class="product__price">R$ 1899 no PIX
-            <span class="product__price-old">2199,90</span>
-          </p>
-          <p class="product__description">O novíssimo sistema de câmera é muito versátil de perto ou de longe. Câmera  de 48 MP</p>
-          <button href="" class="button button-gradient">Compre agora</button>
-  
-        </div>
-      </section> -->
-      <!-- <div class="navigation__header">
-        <div class="navigation__filters">
-          <span>Filtros</span>
-          <i class="fas fa-angle-down"></i>
-        </div>
-        <div class="navigation__search">
-          <i class="fas fa-search" class="navigation__search-icon"></i>
-          <button class="button button-white">Procurar</button>
-        </div>
-      </div> -->
-      <!-- <div class="filters">
-        <select id="sortOrder" class="navigation__filters">
-          <option value="default">Filtros           <i class="fas fa-angle-down"></i>
-          </option>
-          <option value="lowToHigh">Menor preço</option>
-          <option value="highToLow">Maior preço</option>
-          <option value="rating">Relevância</option>
-
-        </select>
-        <button class="button" id="applyFilters">Filtrar</button>
-      </div> -->
+      </template>
       <div class="products" id="products"></div>
-
-      <!-- <div class="products">
-        <div class="product">
-          <h2>SeriA 3x</h2>
-          <img src="./assets/smartwatch.png" alt="Foto do Smartwatch">
-          <div class="product__rating">
-            <i class="fas fa-star product__rating-star"></i>
-            <i class="fas fa-star product__rating-star"></i>
-            <i class="fas fa-star product__rating-star"></i>
-            <i class="fas fa-star product__rating-star"></i>
-            <i class="fas fa-star product__rating-star"></i>
-            <span>(6)</span>
-          </div>
-          <p class="product__price">R$ 1899 no PIX
-            <span class="product__price-old">2199,90</span>
-          </p>
-          <p class="product__description">O novíssimo sistema de câmera é muito versátil de perto ou de longe. Câmera  de 48 MP</p>
-          <button href="" class="button button-gradient">Compre agora</button>
-  
-        </div>
-        <div class="product">
-          <h2>SerieB 2w</h2>
-          <img src="./assets/smartwatch2.png" alt="Foto do Smartwatch">
-          <div class="product__rating">
-            <i class="fas fa-star product__rating-star"></i>
-            <i class="fas fa-star product__rating-star"></i>
-            <i class="fas fa-star product__rating-star"></i>
-            <i class="fas fa-star product__rating-star"></i>
-            <i class="fas fa-star product__rating-star"></i>
-            <span>(6)</span>
-          </div>
-          <p class="product__price">R$ 1899 no PIX
-            <span class="product__price-old">2199,90</span>
-          </p>
-          <p class="product__description">O novíssimo sistema de câmera é muito versátil de perto ou de longe. Câmera  de 48 MP</p>
-          <button href="" class="button button-gradient">Compre agora</button>
-  
-        </div>
-        <div class="product">
-          <h2>Oficial 3xd</h2>
-          <img src="./assets/smartwatch3.png" alt="Foto do Smartwatch">
-          <div class="product__rating">
-            <i class="fas fa-star product__rating-star"></i>
-            <i class="fas fa-star product__rating-star"></i>
-            <i class="fas fa-star product__rating-star"></i>
-            <i class="fas fa-star product__rating-star"></i>
-            <i class="fas fa-star product__rating-star"></i>
-            <span>(6)</span>
-          </div>
-          <p class="product__price">R$ 1899 no PIX
-            <span class="product__price-old">2199,90</span>
-          </p>
-          <p class="product__description">O novíssimo sistema de câmera é muito versátil de perto ou de longe. Câmera  de 48 MP</p>
-          <button href="" class="button button-gradient">Compre agora</button>
-  
-        </div>
-        <div class="product">
-          <h2>Apple Watch</h2>
-          <img src="./assets/smartwatch4.png" alt="Foto do Smartwatch">
-          <div class="product__rating">
-            <i class="fas fa-star product__rating-star"></i>
-            <i class="fas fa-star product__rating-star"></i>
-            <i class="fas fa-star product__rating-star"></i>
-            <i class="fas fa-star product__rating-star"></i>
-            <i class="fas fa-star product__rating-star"></i>
-            <span>(6)</span>
-          </div>
-          <p class="product__price">R$ 1899 no PIX
-            <span class="product__price-old">2199,90</span>
-          </p>
-          <p class="product__description">O novíssimo sistema de câmera é muito versátil de perto ou de longe. Câmera  de 48 MP</p>
-          <button href="" class="button button-gradient">Compre agora</button>
-  
-        </div>
-      </div> -->
       <section class="support">
         <img src="./assets/suporte.png" alt="Suporte ao client" class="support__image">
         <div class="support__content">
           <h2 class="support__title">24/7 no suporte ao cliente</h2>
-          <p class="support__description">Nosso suporte está 7/7 24horas por dia para te ajudar com qualquer problema em nossos aparelhos</p>
+          <p class="support__description">Nosso suporte está 7/7 24horas por dia para te ajudar com qualquer problema em
+            nossos aparelhos</p>
           <button href="" class="button button-gradient">Compre agora</button>
         </div>
       </section>
       <section class="forms-section">
         <h2 class="forms-section__title">Faça sua encomenda</h2>
-        <p class="forms-section__subtitle">Se não encontrar o que deseja, encomende conosco e garanta um super desconto!</p>
+        <p class="forms-section__subtitle">Se não encontrar o que deseja, encomende conosco e garanta um super desconto!
+        </p>
         <form action="" class="forms-section__forms">
           <div class="forms-section__group">
             <label for="" class="forms-section__label">Nome</label>
@@ -286,7 +134,7 @@
     </main>
     <footer class="footer">
       <img src="./assets/logo.svg" alt="Logo wecht" class="footer__logo">
-      <address class="footer__adress"> 
+      <address class="footer__adress">
         <div>
           <p class="footer__adress-line">Rua brás da silva, 281. </p>
           <p class="footer__adress-line">Cidade React, São paulo, Brasil.</p>
@@ -312,16 +160,15 @@
             <i class="fab fa-instagram-square"></i>
           </a>
           <a href="http://" target="_blank" class="footer_social-link">
-            <i class="fab fa-linkedin"></i>       
+            <i class="fab fa-linkedin"></i>
           </a>
         </div>
-        <button class="footer__scroll-top">     
+        <button class="footer__scroll-top">
           <i class="fas fa-arrow-up"></i>
         </button>
       </div>
     </footer>
   </div>
-  <script src="./script.js" type="module"> </script>
 </body>
 
 </html>
